@@ -24,8 +24,7 @@ use lance_encoding::{
         ScheduledScanLine, SchedulerContext, SchedulingJob,
     },
     encoder::{
-        encode_batch, CoreFieldEncodingStrategy, EncodedBatch, EncodedBuffer, EncodedColumn,
-        FieldEncoder,
+        encode_batch, CoreFieldEncodingStrategy, EncodedBatch, EncodedBuffer, EncodedColumn, FieldEncoder
     },
     format::pb,
     EncodingsIo,
@@ -496,8 +495,12 @@ impl ZoneMapsFieldEncoder {
         let encoded_zone_maps =
             encode_batch(&zone_maps, Arc::new(schema), &encoding_strategy, u64::MAX).await?;
         let zone_maps_buffer = encoded_zone_maps.try_to_mini_lance()?;
+
         Ok(EncodedBuffer {
             parts: vec![Buffer::from(zone_maps_buffer)],
+            bits_per_value: 0, // TODO
+            compression_scheme: None,
+            bitpacked_bits_per_value: None,
         })
     }
 }
