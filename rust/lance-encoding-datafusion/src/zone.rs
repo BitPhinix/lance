@@ -499,9 +499,6 @@ impl ZoneMapsFieldEncoder {
 
         Ok(EncodedBuffer {
             parts: vec![Buffer::from(zone_maps_buffer)],
-            // bits_per_value: 0, // TODO
-            // compression_scheme: None,
-            // bitpacked_bits_per_value: None,
         })
     }
 }
