@@ -9,7 +9,7 @@ use arrow_array::{cast::AsArray, Array, ArrayRef, PrimitiveArray};
 use arrow_schema::DataType;
 use bytes::{Bytes, BytesMut};
 use futures::future::{BoxFuture, FutureExt};
-use log::{debug, trace};
+use log::trace;
 use num_traits::{AsPrimitive, PrimInt};
 use snafu::{location, Location};
 
