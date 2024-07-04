@@ -24,7 +24,8 @@ use lance_encoding::{
         ScheduledScanLine, SchedulerContext, SchedulingJob,
     },
     encoder::{
-        encode_batch, CoreFieldEncodingStrategy, EncodedBatch, EncodedBuffer, EncodedColumn, FieldEncoder
+        encode_batch, CoreFieldEncodingStrategy, EncodedBatch, EncodedBuffer, EncodedColumn,
+        FieldEncoder,
     },
     format::pb,
     EncodingsIo,
