@@ -115,9 +115,9 @@ impl ArrayGeneratorProvider for RandomArrayGeneratorProvider {
     }
 
     fn copy(&self) -> Box<dyn ArrayGeneratorProvider> {
-        return Box::new(RandomArrayGeneratorProvider {
+        Box::new(Self {
             field: self.field.clone(),
-        });
+        })
     }
 }
 
