@@ -97,7 +97,7 @@ pub struct WriteParams {
     pub commit_handler: Option<Arc<dyn CommitHandler>>,
 
     /// If present, will be used to wrap the commit handler implementation.
-    /// 
+    ///
     /// This can be used to augment the behavior of the commit of the commit handler implementation.
     pub commit_handler_wrapper: Option<Arc<dyn WrappingCommitHandler>>,
 
