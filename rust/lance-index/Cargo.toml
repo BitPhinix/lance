@@ -55,6 +55,7 @@ tracing.workspace = true
 tempfile.workspace = true
 crossbeam-queue.workspace = true
 bytes.workspace = true
+moka.workspace = true
 
 [dev-dependencies]
 approx.workspace = true
